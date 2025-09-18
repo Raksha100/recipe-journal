@@ -1,0 +1,65 @@
+/* src/components/Navbar.css */
+
+.navbar {
+  /* Codedex-like dark background */
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between; /* Puts logo on one end and links on the other */
+  align-items: center; /* Vertically centers content */
+  font-family: 'Inter', sans-serif; /* A modern, clean font like Codedex's */
+  /* Add a subtle bottom border */
+  border-bottom: 1px solid #333; 
+}
+
+/* Logo styling */
+.navbar-logo a {
+  font-size: 1.5rem;
+  font-weight: 700; /* Bolder font for the title */
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.navbar-logo a:hover {
+  color: #5c62ec; /* A purple or blue hover effect, common in modern UIs */
+}
+
+/* Navigation links */
+.navbar-links {
+  list-style: none; /* Removes bullet points */
+  display: flex;
+  gap: 1.5rem; /* Adds space between links */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: #ccc; /* Lighter grey for links */
+  font-size: 1rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  position: relative; /* Needed for hover effect */
+}
+
+/* Hover and active states for links */
+.navbar-links li a:hover {
+  color: #fff; /* White on hover */
+}
+
+/* Subtle underline on hover */
+.navbar-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #5c62ec;
+  bottom: -5px;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.navbar-links li a:hover::after {
+  width: 100%;
+}
